@@ -12,10 +12,10 @@ def main():
     text_node = TextNode("This is some anchor text", TextType.LINK, "https://www.boot.dev")
     print(text_node)
     
-    delete_public()
-    create_public()
-    copy_static("static", "public")
+    delete_public("docs")
+    create_public("docs")
+    copy_static("static", "docs")
 
-    generate_pages_recursive("content", "template.html", "public", basepath)
+    generate_pages_recursive("content", "template.html", "docs", basepath)
 
 main()

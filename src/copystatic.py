@@ -1,12 +1,12 @@
 import os
 import shutil
 
-def delete_public():
-    if os.path.exists("public"):
-        shutil.rmtree("public")
+def delete_public(dir_name):
+    if os.path.exists(dir_name):
+        shutil.rmtree(dir_name)
 
-def create_public():
-    os.mkdir("public")
+def create_public(dir_name):
+    os.mkdir(dir_name)
 
 def copy_static(source, destination):
     for filename in os.listdir(source):
